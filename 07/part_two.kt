@@ -8,9 +8,7 @@ fun readInput() : List<Int> {
             .map { it.toInt() }
 }
 
-fun solve(positions : MutableList<Int>) : Int {
-    positions.sort()
-
+fun solve(positions : List<Int>) : Int {
     val finalPos = positions.sum() / positions.size
 
     var result = 0
@@ -23,7 +21,7 @@ fun solve(positions : MutableList<Int>) : Int {
 
 fun main() {
     val positions = readInput()
-    val ans = solve(positions.toMutableList())
+    val ans = solve(positions)
 
     println(ans)
 }
